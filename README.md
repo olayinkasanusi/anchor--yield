@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="./anchor_yield_banner_1778588538819.png" alt="Anchor Yield Banner" width="100%">
+  <img src="./favicon.png" alt="Anchor Yield Banner" width="100%">
 </p>
 
 <p align="center">
