@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #050505;
+  --color-obsidian-light: #0a0a0a;
+  --color-lilac: #B494FF;
+  --color-lilac-dark: #926CFF;
+  --color-lilac-light: #D4C3FF;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F9E076;
+  
+  --font-serif: "Raleway", sans-serif;
+  --font-sans: "Roboto", sans-serif;
+  --font-mono: "Montserrat", sans-serif;
+  
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-white font-sans antialiased;
+  }
+  
+  /* Custom scrollbar for webkit */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/20;
+  }
+}
