@@ -192,7 +192,7 @@ export default function Landing() {
             <p className="text-white/40 max-w-xl mx-auto">Our automated system handles the technical complexity while you watch your portfolio grow.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12 relative">
+          <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-6 md:gap-12 relative pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide">
             {/* Visual Connectors (Desktop) */}
             <div className="hidden lg:block absolute top-1/4 left-[30%] right-[30%] h-px border-t border-dashed border-lilac/20 z-0"></div>
 
@@ -216,7 +216,7 @@ export default function Landing() {
                 icon: <TrendingUp size={24} className="text-lilac" />
               }
             ].map((item, i) => (
-              <div key={i} className="relative group">
+              <div key={i} className="relative group min-w-[85vw] md:min-w-0 snap-center">
                 <div className="mb-8 relative inline-block">
                   <div className="w-20 h-20 rounded-2xl bg-obsidian border border-white/10 flex items-center justify-center text-3xl font-serif text-lilac group-hover:border-lilac/50 transition-all duration-500 shadow-2xl">
                     {item.step}
@@ -287,7 +287,7 @@ export default function Landing() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-6 md:gap-8 pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide">
             {[
               {
                 name: "Marcus Thorne",
@@ -305,7 +305,7 @@ export default function Landing() {
                 text: "I've tried many DeFi platforms, but most are too complex or feel unsafe. Anchor Yield feels like the future of private banking."
               }
             ].map((t, i) => (
-              <GlassCard key={i} className="p-8 border border-white/10 hover:border-lilac/30 transition-colors">
+              <GlassCard key={i} className="p-8 border border-white/10 hover:border-lilac/30 transition-colors min-w-[85vw] md:min-w-0 snap-center">
                 <div className="flex gap-1 mb-6 text-[#EAB308]">
                   {[1, 2, 3, 4, 5].map((s) => <TrendingUp key={s} size={14} />)}
                 </div>
@@ -404,6 +404,14 @@ export default function Landing() {
           </div>
         </div>
       </footer>
+      {/* Mobile Floating CTA */}
+      <div className="fixed bottom-6 left-6 right-6 z-50 md:hidden">
+        <Link to={user ? "/investment" : "/auth?mode=signup"}>
+          <Button variant="primary" className="w-full h-14 shadow-2xl shadow-lilac/20 font-bold tracking-widest font-montserrat uppercase flex items-center justify-center gap-2">
+            {user ? "Invest Now" : "Start Earning"} <ArrowUpRight size={20} />
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }
