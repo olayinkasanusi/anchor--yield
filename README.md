@@ -76,7 +76,7 @@ The **Bento Dashboard** serves as the command center. Using **Recharts**, it vis
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/anchor-yield.git
+   git clone https://github.com/olayinksanusi/anchor-yield.git
    cd anchor-yield
    ```
 
